@@ -131,7 +131,7 @@ impl Hmac256Authentication {
 
         let method = req.method.as_ref();
         let path = {
-            let formatter = PathFormatter { path: &req.url.path };
+            let formatter = PathFormatter { path: &req.url.path() };
             formatter.to_string()
         };
 
